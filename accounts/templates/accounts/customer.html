@@ -48,6 +48,7 @@
     <div class="col">
         <div class="card card-body">
             <form method="get">
+                {{my_filter.form}}
                 <button class="btn btn-primary" type="submit">Search</button>
             </form>
         </div>
@@ -65,6 +66,7 @@
                     <th>Category</th>
                     <th>Date Orderd</th>
                     <th>Status</th>
+                    <th>Note</th>
                     <th>Update</th>
                     <th>Remove</th>
                 </tr>
@@ -75,6 +77,7 @@
                     <td>{{order.product.get_category_display}}</td>
                     <td>{{order.date_created}}</td>
                     <td>{{order.get_status_display}}</td>
+                    <td>{{order.note}}</td>
                     <td><a class="btn btn-sm btn-info" href="{% url 'update_order' order.id %}">Update</a></td>
                     <td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a></td>
                 </tr>
