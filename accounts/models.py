@@ -51,4 +51,4 @@ class Order(models.Model):
     status = models.CharField(max_length=200, null=True, choices=STATUS)
 
     def __str__(self):
-        return self.date_created.strftime("%b %d %Y")
+        return self.date_created.strftime("%b %d %Y") + ' ' + self.product.name
