@@ -15,5 +15,13 @@
                 <a class="nav-link" href="{% url 'products' %}">Products</a>
             </li>
         </ul>
+        <div class="d-flex flex-row ml-lg-auto">
+            <span class="navbar-text mr-3">Hello, {{request.user}}</span>
+            <span class="navbar-text">(</span>
+            <a class="nav-link px-0" href="#">Profile</a>
+            <span class="navbar-text mr-1">,</span>
+            <a class="nav-link px-0" href="{% url 'logout' %}">Logout</a>
+            <span class="navbar-text">)</span>
+        </div>
     </div>
 </nav>
